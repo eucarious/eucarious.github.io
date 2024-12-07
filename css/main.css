@@ -20,19 +20,12 @@ header {
     margin: -15px ;
 }
 
-#main { 
-    position: relative;
-    min-height: 99%;
-}
 
 footer { 
-    position: absolute;
-    bottom: 0;
     width: 100%;
 
-    margin: 40px -20px 0px;
-    padding: 30px 0 20px 0;
-
+    margin: 40px 0 -20px;
+    padding: 30px 0 10px;
 
     
     text-align: center;
@@ -41,7 +34,6 @@ footer {
     color: #F2F2F2;
     background-color: #95a756;
 }
-
 
 
 
@@ -80,9 +72,17 @@ b {
     color: #789329;
 }
 
-
-
-
+.t {
+    padding-bottom: 0.2rem;
+}
+.pimg {
+    width: 33.33%;
+    float: left;
+}
+.pdesc {
+    padding-right: 8px;
+    display: inline;
+}
 
 ul {
     list-style-type: none; /* Remove bullets */
@@ -116,7 +116,6 @@ p.small-margin {
 }
 
 
-
 .pad-la {
     padding-left: 1.5%;
     padding-right: 1.5%;
@@ -125,17 +124,43 @@ p.small-margin {
     padding-left: 16%;
     padding-right: 16%;
 }
+.pad-la0 {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+
 .ta-right {
     text-align: right;
 }
 .ta-center {
     text-align: center;
 }
+.ta-justify {
+    text-align: justify;
+}
+
+.va-top {
+    vertical-align: top;
+}
 
 .sticky {
     position: sticky;
 }
 
+
+/* ICONS */
+
+.icon-godot {
+        background: url("../images/godot_icon_monochrome_light.svg");
+        height: 20px;
+        width: 20px;
+        background-size: 20px;
+        display: block;
+        /* Other styles here */
+}
+
+/* GALLERY */
 
 .gallery {
     overflow: hidden; 
@@ -153,8 +178,6 @@ p.small-margin {
     opacity: 1;
     filter: grayscale(0);
 }
-
-
 
 .gallery li { 
     box-sizing: border-box; 
@@ -197,6 +220,9 @@ p.small-margin {
     .gallery .desc {     
         font-size: 0.7rem;
     }
+    .pdesc {     
+        font-size: 0.85rem;
+    }
 }
 
 
@@ -211,6 +237,9 @@ p.small-margin {
         padding: 0.3rem 0.55rem;
     }
     .gallery .desc {     
+        display: none;
+    }
+    .pdesc {     
         display: none;
     }
 }
