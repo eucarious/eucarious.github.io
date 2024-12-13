@@ -2,11 +2,10 @@ content
 - finish bubble invaders text
 
 functionality
-- link home page bubble invaders to the project
 - 
-
-- darkmode (?)
 
 visual
 - fix the occasional text overflow during 
 - make actual placeholder images (?)
+
+- darkmode (?)
