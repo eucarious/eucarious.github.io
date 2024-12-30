@@ -43,6 +43,7 @@ hr {
 }
 
 
+/* LINKS */
 
 a { 
     color: #a0ae6b;
@@ -67,6 +68,8 @@ a.o:hover {
     text-decoration: none;
 }
 
+
+/* TEXT EDITS */
 
 b { 
     color: #789329;
@@ -107,6 +110,8 @@ p.small-margin {
 }
 
 
+/* NAVIGATION */
+
 .nav-bar-tabs {
     display: block;
     width: auto;
@@ -115,6 +120,8 @@ p.small-margin {
     padding-top: 1.2rem;
 }
 
+
+/* PADDING */
 
 .pad-la {
     padding-left: 1.5%;
@@ -130,6 +137,8 @@ p.small-margin {
 }
 
 
+/* TEXT ALIGNMENT */
+
 .ta-right {
     text-align: right;
 }
@@ -140,9 +149,13 @@ p.small-margin {
     text-align: justify;
 }
 
+
+
 .va-top {
     vertical-align: top;
 }
+
+
 
 .sticky {
     position: sticky;
@@ -196,8 +209,9 @@ p.small-margin {
     box-sizing: border-box;
     color: #f2f2f2;
     font-size: 1rem;
-    padding: 0.8rem 1.1rem 0.6rem;
+    padding: 0.8rem 1.1rem 0.8rem;
     max-height: 50%;
+    max-width: 250px;
 }
 .gallery b { 
     color: #f2f2f2;
@@ -211,6 +225,16 @@ p.small-margin {
     margin-top: .5rem;
     font-size: 0.85rem;
 }
+
+
+/* VISUAL EDITS */
+
+.hide {   
+    display: none;
+}
+
+
+/* RESPONSIVE STUFF */
 
 @media screen and (max-width: 750px) {
 

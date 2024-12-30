@@ -1,0 +1,184 @@
+
+
+html { 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #eff5fa;
+    color:  #152969;;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+
+.head { 
+    padding-top: 10px;
+    min-height: 200px;
+    max-height: 200px;
+    padding-bottom: 10px;
+    display: block;
+}
+
+.container { 
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.float-l { 
+    float: left;
+}
+.float-r { 
+    float: right;
+}
+.help { 
+    margin-top: 10%;
+}
+
+/* LINKS */
+
+a { 
+    color: #ca631f;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover { 
+    color: #152969;
+    transition: color 0.2s;
+}
+.nav { 
+    color: #6e7faa;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.nav:hover { 
+    color: #152969;
+    transition: color 0.2s;
+}
+a.o { 
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+a.o:hover { 
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+
+
+
+/* GALLERY STUFF */
+
+.gal { 
+    width: 33.33%;
+    max-height: 300px;
+    max-width: 250px;
+}
+.gal-text { 
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+
+ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+    display: inline-block;
+}
+
+li {
+    display: inline-block;
+    min-width: 75px;
+    min-height: 20px;
+}
+
+
+
+p.small-margin { 
+   margin-top: 0.3rem;
+}
+
+
+/* NAVIGATION */
+
+
+
+/* PADDING */
+
+.pad-la {
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+}
+.pad-la1 {
+    padding-left: 16%;
+    padding-right: 16%;
+}
+.pad-la0 {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+
+/* TEXT ALIGNMENT */
+
+.ta-right {
+    text-align: right;
+}
+.ta-center {
+    text-align: center;
+}
+.ta-justify {
+    text-align: justify;
+}
+
+
+
+.va-top {
+    vertical-align: top;
+}
+
+
+
+.sticky {
+    position: sticky;
+}
+
+
+/* ICONS */
+
+.icon-godot {
+        background: url("../images/godot_icon_monochrome_light.svg");
+        height: 20px;
+        width: 20px;
+        background-size: 20px;
+        display: block;
+        /* Other styles here */
+}
+
+
+/* VISUAL EDITS */
+
+.hide {   
+    display: none;
+}
+
+
+/* RESPONSIVE STUFF */
+
+
+@media screen and (max-width: 620px) {
+    .gal { 
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .gal { 
+        width: 100%;
+    }
+}
