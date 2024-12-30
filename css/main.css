@@ -263,9 +263,14 @@ p.small-margin {
     .gallery .desc {     
         display: none;
     }
+    .gallery li {
+        width: 50%;
+    }
+    
     .pdesc {     
         display: none;
     }
+    
 }
 
 @media screen and (max-width: 400px) {
@@ -275,6 +280,9 @@ p.small-margin {
     }
     .gallery b { 
         font-size: 0.8rem;
+    }
+    .gallery li {
+        width: 100%;
     }
 
     .nav-bar-tabs {
