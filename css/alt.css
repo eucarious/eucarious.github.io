@@ -79,12 +79,24 @@ h3, h4 {
 .text { 
     font-size: 1.15rem;
 }
+
 .archive
 { 
     margin-bottom: -0.5rem;
 }
 
+.dotted { 
+    color: #ca631f;
+    text-decoration: dotted underline;
+}
 
+.dotted-plain { 
+    text-decoration: dotted underline;
+}
+
+.inline { 
+    display: inline-block;
+}
 
 /* GALLERY STUFF */
 
@@ -114,8 +126,8 @@ h3, h4 {
     margin-left: 75px;
 }
 
-.vert-img { 
-    max-width: 33.33%;
+.third { 
+    width: 33.33%;
 }
 
 
