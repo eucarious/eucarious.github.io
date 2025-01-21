@@ -19,6 +19,11 @@ img {
     height: 95%;
 } 
 
+.thumb {
+    max-width: 250px;
+    max-height: 250px;
+}
+
 .head { 
     padding-top: 10px;
     min-height: 200px;
