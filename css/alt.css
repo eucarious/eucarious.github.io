@@ -219,22 +219,28 @@ p.small-margin {
 
 /* ICONS */
 
-.icon-godot {
-        background: url("../images/godot_icon_monochrome_light.svg");
-        height: 20px;
-        width: 20px;
-        background-size: 20px;
-        display: block;
-        /* Other styles here */
+.icon-godot-mono {
+    background: url("../images/godot_icon_monochrome_light.svg");
+    height: 1.25rem;
+    width: 1.25rem;
+    background-size: 1.25rem;
+    filter: invert(12%) sepia(45%) saturate(4438%) hue-rotate(222deg) brightness(85%) contrast(94%);;
+    display: inline-block;
 }
 
+.icon-godot-color {
+    background: url("../images/godot_icon_color.svg");
+    height: 1.25rem;
+    width: 1.25rem;
+    background-size: 1.25rem;
+    display: inline-block;
+}
 
 /* VISUAL EDITS */
 
 .hide {   
     display: none;
 }
-
 
 /* RESPONSIVE STUFF */
 
