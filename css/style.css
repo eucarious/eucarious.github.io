@@ -1,0 +1,155 @@
+/* '*' is the universal selector. applies to all elements */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  color: cadetblue;
+}
+
+body {
+  background-color: rgb(250, 250, 250);
+}
+
+header {
+  position: fixed;
+  top: 5vh;
+  right: 0;
+  z-index: 10;
+  padding: 10px;
+  text-align: right;
+}
+
+header p {
+  padding: 4px;
+  color: cadetblue;
+  display: block;
+}
+
+header nav a {
+  padding: 4px;
+  color: lightsteelblue;
+  display: block;
+}
+
+header nav a.active {
+  color: rgb(184, 122, 106);
+}
+
+header nav a:hover {
+  padding: 4px 8px 4px 0;
+  filter: invert(30%);
+}
+
+div, section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul li {
+  list-style: inside;
+}
+
+
+ol li {
+  list-style: none;
+}
+
+ol li a {
+  padding: 4px 0;
+  color: lightsteelblue;
+}
+
+ol li a:hover {
+  padding: 0 0 0 4px;
+  filter: invert(30%);
+}
+
+#projectLink {
+  color: rgb(184, 122, 106);
+  font-family: monospace;
+}
+
+#projectLink:hover {
+  padding: 0 0 0 4px;
+  filter: invert(30%);
+}
+
+hr {
+  margin-bottom: 2px;
+}
+
+i {
+  font-size: 26px;
+  margin: 4px;
+}
+
+dl {
+	display: grid;
+	grid-template-columns: max-content 1fr;
+	column-gap: 0.5em;
+	margin-block: 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dt, dd {
+  padding: 2px 0;
+}
+
+#preview {
+  width: 320px; 
+  height: 180px; 
+  object-fit: cover;
+}
+
+.flexgap {
+  gap: 4px;
+}
+
+.hover:hover {
+  filter: invert(30%);
+}
+
+.small {
+  font-size: 0.9rem;
+}
+
+.align-top-left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+}
+
+.part {
+  min-height: 100vh;
+}
+
+.light {
+  color: lightsteelblue;
+}
+
+.p10 {
+  padding: 10px;
+}
+
+.p10-top {
+  padding-top: 10px;
+}
+
+.p10-vert {
+  padding: 10px 0;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+.bg-white {
+  background-color: rgb(250, 250, 250);
+}
