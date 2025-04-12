@@ -13,7 +13,7 @@
   
   <header>
     <p>˗ˏˋ navigation ♡ ˎˊ˗</p>
-    <nav>
+    <nav style="padding-right: 20px;">
       <a class="active" href="#about" >about</a>
       <a href="#projects">projects</a>
       <a href="#other">other</a>
@@ -58,7 +58,7 @@
       <hr style="width: 108%;">
       <dl>
       </dl>
-      <p><a id="projectLink"></a></p>
+      <p style="padding-top: 4px;"><a id="projectLink"></a> &emsp; <a id="projectSite"></a></p>
       <p id="projectBlurb"></p>
       <img src="" id="preview" style="max-width: 40vw;">
     </div>
@@ -85,6 +85,83 @@
 
 
 <script>
+const history = 
+[{
+    title: "bubble invaders", 
+    date: new Date(2024, 11, 9),
+    duration: "8 weeks",
+    using: "unity (c#)",
+    link: "https://bluekiivi.itch.io/bubble-invaders",
+    site: "",
+    sitedesc: "",
+    blurb: "a space invaders copy made in unity for the first portfolio project course"
+  }, 
+  {
+    title: "jurard", 
+    date: new Date(2025, 2, 13),
+    duration: "8 weeks",
+    using: "c++",
+    site: "https://eucarious.github.io/worlds-worst-chessbot/html/",
+    sitedesc: "documentation",
+    link: "https://github.com/eucarious/worlds-worst-chessbot",
+    blurb: "ground up chess engine made for my data structures and algorithms course. has en passant, castling, and alpha beta pruning"
+}]
+
+const params = new URLSearchParams(location.search);
+const preview = document.getElementById('preview');
+const info = document.querySelector('dl');
+const blurb = document.getElementById('projectBlurb');
+const plink = document.getElementById('projectLink');
+const psite = document.getElementById('projectSite');
+var details;
+var index;
+
+function setDetails(i, updateParams = true) {
+  details = history[index = i];
+
+  preview.src = `img/preview/${details.title}.png`;
+  info.innerHTML = `
+        <dt> title </dt>
+        <dd> ${details.title} </dd>
+        <dt> end date</dt>
+        <dd> ${details.date.toLocaleDateString("en-FI", {day: "numeric", month: "long", year: "numeric"}).toLowerCase()}</dd>
+        <dt> duration</dt>
+        <dd> ${details.duration}</dd>
+        <dt> using</dt>
+        <dd> ${details.using}</dd>
+      `;
+  
+  plink.href = `${details.link ?? '-'}`;
+  plink.text = details.link.length == 0 ? '' : 'link to project' ;
+
+  psite.href = `${details.site ?? '-'}`;
+  psite.text = details.site.length == 0 ? '' : details.sitedesc ;
+
+  blurb.innerText = `${details.blurb ?? '-'}`;
+  blurb.classList.add('p10-vert');
+}
+
+const list = document.getElementById('projectList');
+
+for (let i = 0; i < history.length; i++) {
+  let newLi = document.createElement('li');
+  let newA = document.createElement('a');
+  newA.href = 'javascript:void(0)';
+  newA.onclick= () => setDetails(i);
+  newA.text = `${history[i].title}`;
+  newLi.appendChild(newA);
+
+  list.appendChild(newLi);
+}
+
+if (params.has("title")) {
+  let i = history.findIndex(c => c.name == params.get("details"));
+	setDetails(i == -1 ? i: history.length - 1, false);
+} else setDetails(0, false);
+
+
+
+// Nav
 let section = document.querySelectorAll('section')
 let navLinks = document.querySelectorAll('header nav a')
 
@@ -106,71 +183,5 @@ window.onscroll = () => {
   } )
 }
 
-const history = [{
-  title: "bubble invaders", 
-  date: new Date(2024, 11, 9),
-  duration: "8 weeks",
-  using: "unity",
-  link: "https://bluekiivi.itch.io/bubble-invaders",
-  blurb: "a space invaders copy made in unity for the first portfolio project course"
-  }, 
-  {
-    title: "jurard", 
-    date: new Date(2025, 2, 13),
-    duration: "8 weeks",
-    using: "c++",
-    link: "https://github.com/eucarious/worlds-worst-chessbot",
-    blurb: "ground up chess engine made for my data structures and algorithms course"
-}]
 
-const params = new URLSearchParams(location.search);
-const preview = document.getElementById('preview');
-const info = document.querySelector('dl');
-const blurb = document.getElementById('projectBlurb');
-const plink = document.getElementById('projectLink');
-var details;
-var index;
-
-function setDetails(i, updateParams = true) {
-  details = history[index = i];
-
-  preview.src = `img/preview/${details.title}.png`;
-  info.innerHTML = `
-        <dt> title </dt>
-        <dd> ${details.title} </dd>
-        <dt> completion<br>date</dt>
-        <dd> ${details.date.toLocaleDateString("en-FI", {day: "numeric", month: "long", year: "numeric"}).toLowerCase()}</dd>
-        <dt> duration</dt>
-        <dd> ${details.duration}</dd>
-        <dt> using</dt>
-        <dd> ${details.using}</dd>
-      `;
-  
-  plink.href = `${details.link ?? '-'}`;
-  plink.text = Object.keys('link').length == 0 ? '' : 'link to project' ;
-  blurb.innerText = `${details.blurb ?? '-'}`;
-  blurb.classList.add('p10-vert');
-  if (updateParams) {
-		params.set("details", details.title);
-		window.history.replaceState(null, "", "?" + params);
-	}
-}
-
-const list = document.getElementById('projectList');
-
-for (let i = 0; i < history.length; i++) {
-  let newLi = document.createElement('li');
-  let newA = document.createElement('a');
-  newA.href = 'javascript:void(0)';
-  newA.onclick= () => setDetails(i);
-  newA.text = `${history[i].title}`;
-  newLi.appendChild(newA);
-
-  list.appendChild(newLi);
-}
-
-if (params.has("title")) {
-  let i = history.findIndex(c => c.name == params.get("details"));
-	setDetails(i == -1 ? i: history.length - 1, false);
-} else setDetails(0, false);
 </script>
