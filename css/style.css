@@ -66,9 +66,13 @@ ol li a {
 }
 
 ol li a:hover {
-  padding: 0 0 0 4px;
   filter: invert(30%);
 }
+
+.project:hover {
+  padding: 0 0 0 4px;
+}
+
 
 #projectLink, #projectSite {
   border: 2px solid;
@@ -83,9 +87,6 @@ ol li a:hover {
   filter: invert(30%);
 }
 
-hr {
-  margin-bottom: 2px;
-}
 
 i {
   font-size: 26px;

@@ -12,7 +12,7 @@
 <body>
   
   <header>
-    <p>˗ˏˋ navigation ♡ ˎˊ˗</p>
+    <p>˗ˏˋ navigation ଳ ˎˊ˗</p>
     <nav style="padding-right: 20px;">
       <a class="active" href="#about" >about</a>
       <a href="#projects">projects</a>
@@ -27,7 +27,7 @@
 
     <div class="align-top-left vertical" style="max-width: 20%; height: 150px;" >
       <p style="top: 0;"> <b> viktor asprot </b> &emsp; &ensp; <span class="light small"> any / all</span></p> 
-      <hr style="width: 108%;">
+      <h2 style="margin-top: -8px;">𓆝 𓆟 𓆞 𓆟 𓆝 𓆟 𓆞</h2>
       <ul>
         <li>game dev student</li>
         <li>professional dabbler</li>
@@ -54,13 +54,13 @@
     </div>
 
     <div class="align-top-left vertical"  style="max-width: 25%;">
-      <h2>project details</h2>
-      <hr style="width: 108%;">
+      <h2>project details <◉ )))><</h2>
+      <hr style="width: 108%; margin-bottom: 6px;">
       <dl>
       </dl>
       <p style="padding-top: 4px;"><a id="projectLink"></a> &emsp; <a id="projectSite"></a></p>
       <p id="projectBlurb"></p>
-      <img src="" id="preview" style="max-width: 40vw;">
+      <img src="" id="preview" style="max-width: 108%;">
     </div>
 
   </section>
@@ -69,15 +69,35 @@
     
     <div class="p10 vertical" style="min-width: 150px; min-height: 150px;">
       <h2 style="text-align: right;">other projects</h2>
-      <ol style="width: 100%;">
-        <li>game jams | <a href="https://itch.io/c/5308018/jams">every game jam i have participated in</a></li>
-      </ol>
+      <table>
+        <tr>
+          <td>
+            <ol style="width: 100%;">
+              <li>game jams</li>
+              <li>this site</li>
+            </ol>
+          </td>
+          <td style="padding: 0 4px;">
+            <ol style="width: 100%;">
+              <li> | </li>
+              <li> | </li>
+            </ol>
+          </td>
+          <td>
+            <ol style="width: 100%;">
+              <li><a href="https://itch.io/c/5308018/jams">every game jam i have participated in</a></li>
+              <li>you're already here!  ˎˊ˗</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+      
     </div>
 
   </section>
 
   <div style="height: 3rem;">
-    <p>by yours truly</p>
+    <p><b>𓆝 𓆟 𓆞</b> &emsp; by yours truly &emsp; <b>𓆞 𓆟 𓆝</b></p>
   </div>
 
 </body>
@@ -150,7 +170,7 @@ for (let i = 0; i < history.length; i++) {
   newA.onclick= () => setDetails(i);
   newA.text = `${history[i].title}`;
   newLi.appendChild(newA);
-
+  newLi.classList.add("project");
   list.appendChild(newLi);
 }
 
