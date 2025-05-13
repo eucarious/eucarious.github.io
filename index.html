@@ -26,8 +26,8 @@
     </div>
 
     <div class="align-top-left vertical" style="max-width: 20%; height: 150px;" >
-      <p style="top: 0;"> <b> viktor asprot </b> &emsp; &ensp; <span class="light small"> any / all</span></p> 
-      <h2 style="margin-top: -8px;">𓆝 𓆟 𓆞 𓆟 𓆝 𓆟 𓆞</h2>
+      <p style="top: 0;"> <b> viktor asprot </b> &emsp; &ensp; <span class="light small" style="text-wrap: nowrap;"> any / all</span></p> 
+      <hr style="min-width: 100%;">
       <ul>
         <li>game dev student</li>
         <li>professional dabbler</li>
@@ -54,7 +54,7 @@
     </div>
 
     <div class="align-top-left vertical"  style="max-width: 25%;">
-      <h2>project details <◉ )))><</h2>
+      <h2>project details <◉)))><</h2>
       <hr style="width: 108%; margin-bottom: 6px;">
       <dl>
       </dl>
@@ -106,26 +106,44 @@
 
 <script>
 const history = 
-[{
-    title: "bubble invaders", 
-    date: new Date(2024, 11, 9),
+[
+  {
+    title: "AQUAKILL", 
+    date: new Date(2025, 4, 12),
     duration: "8 weeks",
-    using: "unity (c#)",
-    link: "https://bluekiivi.itch.io/bubble-invaders",
+    role: "menus and version control",
+    using: "unity (c#, uxml, uss)",
     site: "",
     sitedesc: "",
-    blurb: "a space invaders copy made in unity for the first portfolio project course"
-  }, 
+    link: "https://dancingsoldier.itch.io/aquakill",
+    blurb: "an underwater movement shooter with directional dashing, ground crashing, and plenty of fish to shoot. \n\n created for our second portfolio course at metropolia. \n\n made by joonatan hakoniemi, aleksi lummila, eemeli kaski, johannes rahu, amanda rantamäki, olena tyshchenko, anton zaderaiko, and me!"
+  }
+  ,
   {
     title: "jurard", 
     date: new Date(2025, 2, 13),
     duration: "8 weeks",
+    role: "solo (˶◜ᵕ◝˶)",
     using: "c++",
     site: "https://eucarious.github.io/worlds-worst-chessbot/html/",
     sitedesc: "documentation",
     link: "https://github.com/eucarious/worlds-worst-chessbot",
-    blurb: "ground up chess engine made for my data structures and algorithms course. has en passant, castling, and alpha beta pruning"
-}]
+    blurb: "ground up chess engine made for my data structures and algorithms course. \n\n has en passant, castling, and alpha beta pruning"
+  }
+  ,
+  {
+    title: "bubble invaders", 
+    date: new Date(2024, 11, 9),
+    duration: "8 weeks",
+    role: "solo (˶◜ᵕ◝˶)︎",
+    using: "unity (c#)",
+    link: "https://bluekiivi.itch.io/bubble-invaders",
+    site: "",
+    sitedesc: "",
+    blurb: "a space invaders copy made for our first portfolio project course at metropolia. \n\n all sprites and images used are handdrawn by me"
+  }
+
+]
 
 const params = new URLSearchParams(location.search);
 const preview = document.getElementById('preview');
@@ -147,6 +165,8 @@ function setDetails(i, updateParams = true) {
         <dd> ${details.date.toLocaleDateString("en-FI", {day: "numeric", month: "long", year: "numeric"}).toLowerCase()}</dd>
         <dt> duration</dt>
         <dd> ${details.duration}</dd>
+        <dt> role</dt>
+        <dd> ${details.role}</dd>
         <dt> using</dt>
         <dd> ${details.using}</dd>
       `;
