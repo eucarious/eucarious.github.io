@@ -1,126 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/ca96bcb3ee.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/alt.css"> 
-    
-    <script src="/scripts/script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>viktor asprot</title>
 
-    <link href='https://fonts.googleapis.com/css?family=Chivo' rel='stylesheet'>
-    <style> body { font-family: 'Chivo';font-size: 22px; } </style>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/ca96bcb3ee.js" crossorigin="anonymous"></script>
 
-    <title>Viktor Asprot | Game Development Student</title>
 </head>
-
-
-<header>
-
-    <div class="container head">
-
-        <div class="float-l">
-            <img src="/images/meeb.png" style="height: 150px; width: 150px;">
-            <p style="color: #6b7faa; " class="gal-text" >
-                <sub>
-                    viktor asprot | programmer  
-                    <a href="https://www.linkedin.com/in/viktor-asprot/">
-                    <i class="fa-brands fa-linkedin" style="font-size: 24px;"></i></a>
-                </sub>
-            </p>
-        </div>
-                    
-        <div class="float-r help">
-            <ul>
-                <li>
-                    <a href="/index.html" class="">HOME</a>
-                </li>
-                <li>
-                    <a href="/work/index.html" class="nav">WORK</a>
-                </li>
-                <li>
-                    <a href="/about/index.html" class="nav">ABOUT</a>
-                </li>
-                <li>
-                    <a href="/archive/index.html" class="nav">ARCHIVE</a>
-                </li>
-            </ul>
-        </div>         
-                
-    </div>
-  
-</header>
-
-
 <body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up" style="font-size: 24px;"></i></button> 
-    
-    <div class="container">
+  
+  <header>
+    <p>˗ˏˋ navigation ଳ ˎˊ˗</p>
+    <nav style="padding-right: 20px;">
+      <a class="active" href="#about" >about</a>
+      <a href="#projects">projects</a>
+      <a href="#other">other</a>
+    </nav>
+  </header>
 
-        <h2>latest work</h2>
-
-        <div class="gal">
-            <a href="work/thissite.html" class="o">
-                <img src="/images/IMG_2686.GIF" alt="">
-                <p class="gal-text"><sub>THIS WEBSITE :D</sub></p>
-            </a>
-        </div>
-        
-        <div class="gal">
-            <a href="work/gamejams.html" class="o">
-                <img src="work/img/jams/thumb.png" class="thumb">
-                <p class="gal-text"><sub>GAME JAMS</sub></p>
-            </a>
-        </div>
-
-        <div class="gal">
-            <a href="work/bubbleinvaders.html" class="o">
-                <img src="/work/img/bubbleinvaders/promo004.png" alt="">
-                <p class="gal-text"><sub>BUBBLE INVADERS</sub></p>
-            </a>
-        </div>
-
+  <section id="about" class="part">
+    <div>
+      <img src="img/meeb.png" class="p10">
     </div>
 
-    <div class="container last">
+    <div class="align-top-left vertical" style="max-width: 20%; height: 150px;" >
+      <p style="top: 0;"> <b> viktor asprot </b> &emsp; &ensp; <span class="light small" style="text-wrap: nowrap;"> any / all</span></p> 
+      <hr style="min-width: 100%;">
+      <ul>
+        <li>game dev student</li>
+        <li>professional dabbler</li>
+        <li>a secret third option <span class="light small">..?</span></li>
+      </ul>
+      <p class="p10-top">
+        <a href="https://www.linkedin.com/in/viktor-asprot/">
+          <i class="fa-brands fa-linkedin hover"></i></a>
+        <a href="https://github.com/eucarious" >
+          <i class="fa-brands fa-github hover"></i></a>
+      </p>
 
-        
-
-        <table style="width: 100%; margin-top: 1rem;" class="ta-left">
-            <tbody>
-                <tr>
-                    <th colspan="2" style="padding: 1rem 0;"> 
-                        recent archives
-                    </th>
-                </tr>
-                <tr>
-                    <th class="text" style="padding: 0.5rem 0;">
-                        <a href="archive/OldSite/indexmain.html">
-                                Old Website format</a>
-                    </th>
-                    <td class="text">
-                        The former appearance of this very website
-                    </td>
-                </tr>
-                <tr>
-                    <th class="text" style="padding: 0.5rem 0;">
-                        <b><a href="archive/CanteenCalc/index.html">
-                                    Canteen Cost Calculator</a></b>
-                        
-                    </th>
-                    <td class="text">
-                        A Project from TUS: Midlands
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-       
-
-        </p> 
-        
     </div>
     
+  </section>
+
+  <section id="projects" class="part">
+
+    <div class="p10 vertical" style="min-width: 150px;">
+      <h2 style="text-align: right;">projects</h2>
+      <ol style="width: 100%;" id='projectList'>
+        
+      </ol>
+    </div>
+
+    <div class="align-top-left vertical"  style="max-width: 25%;">
+      <h2>project details <◉)))><</h2>
+      <hr style="width: 108%; margin-bottom: 6px;">
+      <dl>
+      </dl>
+      <p style="padding-top: 4px;"><a id="projectLink"></a> &emsp; <a id="projectSite"></a></p>
+      <p id="projectBlurb"></p>
+      <img src="" id="preview" style="max-width: 108%;">
+    </div>
+
+  </section>
+
+  <section id="other" class="part">
+    
+    <div class="p10 vertical" style="min-width: 150px; min-height: 150px;">
+      <h2 style="text-align: right;">other projects</h2>
+      <table>
+        <tr>
+          <td>
+            <ol style="width: 100%;">
+              <li>game jams</li>
+              <li>this site</li>
+            </ol>
+          </td>
+          <td style="padding: 0 4px;">
+            <ol style="width: 100%;">
+              <li> | </li>
+              <li> | </li>
+            </ol>
+          </td>
+          <td>
+            <ol style="width: 100%;">
+              <li><a href="https://itch.io/c/5308018/jams">every game jam i have participated in</a></li>
+              <li>you're already here!  ˎˊ˗</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+      
+    </div>
+
+  </section>
+
+  <div style="height: 3rem;">
+    <p><b>𓆝 𓆟 𓆞</b> &emsp; by yours truly &emsp; <b>𓆞 𓆟 𓆝</b></p>
+  </div>
+
 </body>
-
-
 </html>
+
+
+<script>
+const history = 
+[
+  {
+    title: "AQUAKILL", 
+    date: new Date(2025, 4, 12),
+    duration: "8 weeks",
+    role: "menus and version control",
+    using: "unity (c#, uxml, uss)",
+    site: "",
+    sitedesc: "",
+    link: "https://dancingsoldier.itch.io/aquakill",
+    blurb: "an underwater movement shooter with directional dashing, ground crashing, and plenty of fish to shoot. \n\n created for our second portfolio course at metropolia. \n\n made by joonatan hakoniemi, aleksi lummila, eemeli kaski, johannes rahu, amanda rantamäki, olena tyshchenko, anton zaderaiko, and me!"
+  }
+  ,
+  {
+    title: "jurard", 
+    date: new Date(2025, 2, 13),
+    duration: "8 weeks",
+    role: "solo (˶◜ᵕ◝˶)",
+    using: "c++",
+    site: "https://eucarious.github.io/worlds-worst-chessbot/html/",
+    sitedesc: "documentation",
+    link: "https://github.com/eucarious/worlds-worst-chessbot",
+    blurb: "ground up chess engine made for my data structures and algorithms course. \n\n has en passant, castling, and alpha beta pruning"
+  }
+  ,
+  {
+    title: "bubble invaders", 
+    date: new Date(2024, 11, 9),
+    duration: "8 weeks",
+    role: "solo (˶◜ᵕ◝˶)︎",
+    using: "unity (c#)",
+    link: "https://bluekiivi.itch.io/bubble-invaders",
+    site: "",
+    sitedesc: "",
+    blurb: "a space invaders copy made for our first portfolio project course at metropolia. \n\n all sprites and images used are handdrawn by me"
+  }
+
+]
+
+const params = new URLSearchParams(location.search);
+const preview = document.getElementById('preview');
+const info = document.querySelector('dl');
+const blurb = document.getElementById('projectBlurb');
+const plink = document.getElementById('projectLink');
+const psite = document.getElementById('projectSite');
+var details;
+var index;
+
+function setDetails(i, updateParams = true) {
+  details = history[index = i];
+
+  preview.src = `img/preview/${details.title}.png`;
+  info.innerHTML = `
+        <dt> title </dt>
+        <dd> ${details.title} </dd>
+        <dt> end date</dt>
+        <dd> ${details.date.toLocaleDateString("en-FI", {day: "numeric", month: "long", year: "numeric"}).toLowerCase()}</dd>
+        <dt> duration</dt>
+        <dd> ${details.duration}</dd>
+        <dt> role</dt>
+        <dd> ${details.role}</dd>
+        <dt> using</dt>
+        <dd> ${details.using}</dd>
+      `;
+  
+  plink.href = `${details.link ?? '-'}`;
+  plink.text = details.link.length == 0 ? '' : 'link to project' ;
+
+  psite.href = `${details.site ?? '-'}`;
+  psite.text = details.site.length == 0 ? '' : details.sitedesc ;
+
+  blurb.innerText = `${details.blurb ?? '-'}`;
+  blurb.classList.add('p10-vert');
+}
+
+const list = document.getElementById('projectList');
+
+for (let i = 0; i < history.length; i++) {
+  let newLi = document.createElement('li');
+  let newA = document.createElement('a');
+  newA.href = 'javascript:void(0)';
+  newA.onclick= () => setDetails(i);
+  newA.text = `${history[i].title}`;
+  newLi.appendChild(newA);
+  newLi.classList.add("project");
+  list.appendChild(newLi);
+}
+
+if (params.has("title")) {
+  let i = history.findIndex(c => c.name == params.get("details"));
+	setDetails(i == -1 ? i: history.length - 1, false);
+} else setDetails(0, false);
+
+
+
+// Nav
+let section = document.querySelectorAll('section')
+let navLinks = document.querySelectorAll('header nav a')
+
+window.onscroll = () => {
+
+  section.forEach(sec => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute('id');
+
+    if (top >= offset && top < offset + height) {
+      navLinks.forEach(links => {
+        links.classList.remove('active');
+        document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+      })
+    }
+
+  } )
+}
+
+
+</script>
