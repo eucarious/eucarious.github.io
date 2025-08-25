@@ -131,6 +131,9 @@ button:hover {
 }
 
 @media screen and (max-width: 750px) {
+  header {
+  font-size: larger;
+  }
   .flex {
     display: flex;
     flex-direction: column;
