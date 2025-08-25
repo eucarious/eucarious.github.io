@@ -74,7 +74,7 @@ button:hover {
 
 .pfp {
   width: 100%;
-  max-height: 8vw;
+  max-height: 20vw;
   object-fit: cover;
 }
 
@@ -135,11 +135,6 @@ button:hover {
   .flex {
     display: flex;
     flex-direction: column;
-  }
-  
-  .pfp {
-    width: 100%;
-    max-height: 20vw;
   }
   
   .preview {
