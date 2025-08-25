@@ -1,0 +1,29 @@
+.center {
+  margin: auto;
+  width: 90%;
+}
+
+.inline {
+  display: inline;
+}
+
+
+.full-width {
+  width: 100vw;
+}
+
+.flex {
+  display: flex;
+}
+
+.f-dir-row {
+  flex-direction: row;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
