@@ -18,7 +18,30 @@
  *
  */
 
+
+
+
 function $(id){
   return document.getElementById(id)
 }
 
+
+toggle_dark = function () {
+  var body = document.body
+  $("eye").classList.toggle("dark")
+  body.classList.toggle("dark")
+  
+  if ($("eye").classList.contains("dark")) {
+    $("eye").innerText = "◡"
+  
+  } else {
+    $("eye").innerText = "◉"
+  }
+}
+
+
+window.onload = function () {
+  $("eye").onclick = function() {
+    toggle_dark();
+  }
+}
