@@ -132,7 +132,7 @@ button:hover {
 
 @media screen and (max-width: 750px) {
   header {
-  font-size: larger;
+  font-size: medium;
   }
   .flex {
     display: flex;
