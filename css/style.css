@@ -2,13 +2,15 @@
 :root {
   --bg: oklch(98.448% 0.01137 217.998);
   --text: oklch(21.3% 0.11851 263.805);
-  --text-muted: oklch(0.4 0.09 247);
-  --primary: oklch(67.402% 0.14081 233.86);
-  --secondary: oklch(67.605% 0.16 59.055);
+  --primary: oklch(56.376% 0.14281 245.303);
+  --secondary: oklch(57.916% 0.13877 57.871);
+
   }
 .dark {
   --bg: oklch(0.15 0.045 247);
   --text: oklch(96.036% 0.02836 219.119);
+  --primary: oklch(79.235% 0.09593 242.431);
+  --secondary: oklch(81.532% 0.10996 63.473);
 }
 
 
