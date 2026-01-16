@@ -1,0 +1,71 @@
+
+:root {
+  --bg: oklch(96.416% 0.00011 271.152);
+  --text: oklch(21.3% 0.11851 263.805);
+  --text-muted: oklch(0.4 0.09 247);
+  --primary: oklch(67.402% 0.14081 233.86);
+  --secondary: oklch(67.605% 0.16 59.055);
+  }
+
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+ul {
+    padding: 0 0 0 1rem;
+}
+
+.l {
+    text-align: left;
+}
+
+body {
+    width: 100%;
+
+}
+
+.ib {
+    display: inline-block;
+    margin: auto 2rem auto 0;
+}
+
+.fish {
+    font-size: xxx-large;
+    margin: 0;
+}
+
+.fish-eye {
+    font-size: xxx-large;
+    margin: -1rem 0 -2rem;
+}
+
+.me {
+    margin-left: 3rem;
+}
+
+.border {
+    border: 2px solid palevioletred;
+    border-style: dashed;
+    padding: 0rem 1rem 1rem 2rem;
+}
+
+.c {
+    text-align: center;
+}
+
+.u-dline {
+    text-decoration: underline double forestgreen;
+}
+
+.pink {
+    color: hotpink;
+}
+
+.green {
+    color: forestgreen;
+}
