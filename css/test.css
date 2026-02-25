@@ -19,19 +19,29 @@ img {
 ul {
     padding: 0 0 0 1rem;
 }
+ul li {
+    margin: 0 auto;
+    width: 200px;
+    padding: 0 1rem;
+    list-style-position: outside;
+    list-style: square;
+}
 
 .l {
     text-align: left;
 }
 
+.ib {
+    display: inline-block;
+}
+
+.pad {
+    padding-left: 2rem;
+}
+
 body {
     width: 100%;
 
-}
-
-.ib {
-    display: inline-block;
-    margin: auto 2rem auto 0;
 }
 
 .fish {
@@ -48,10 +58,25 @@ body {
     margin-left: 3rem;
 }
 
+@media only screen and (max-width: 950px) {
+
+.me {
+    margin-left: 1.5rem;
+}
+  .fish {
+    font-size: x-large;
+    margin: 0;
+    }
+
+.fish-eye {
+    font-size: x-large;
+    margin: -1rem 0 -1rem;
+    }
+}
+
 .border {
-    border: 2px solid palevioletred;
+    border: 2px solid var(--secondary);
     border-style: dashed;
-    padding: 0rem 1rem 1rem 2rem;
 }
 
 .c {
