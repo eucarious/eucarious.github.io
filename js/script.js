@@ -28,20 +28,39 @@ function $(id){
 
 toggle_dark = function () {
   var body = document.body
-  $("eye").classList.toggle("dark")
+  $("mode").classList.toggle("dark")
   body.classList.toggle("dark")
   
-  if ($("eye").classList.contains("dark")) {
-    $("eye").innerText = "◡"
-  
+  if ($("mode").classList.contains("dark")) {
+    $("mode").innerHTML = "O 。.( u . u &nbsp; ) "
+    document.cookie = "mode=dark"
   } else {
-    $("eye").innerText = "◉"
+    $("mode").innerHTML = "oV, ( ● v ● &nbsp; )"
+    document.cookie = "mode=light"
   }
 }
 
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
 
 window.onload = function () {
-  $("eye").onclick = function() {
+  let mode = getCookie("mode");
+  if (mode == "dark")
+    toggle_dark();
+  $("mode").onclick = function() {
     toggle_dark();
   }
 }
