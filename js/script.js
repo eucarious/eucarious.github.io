@@ -25,6 +25,32 @@ function $(id){
   return document.getElementById(id)
 }
 
+toggle_made = function () {
+    var body = document.body
+    $("made").classList.toggle("hide")
+
+    if ($("made").classList.contains("hide")) {
+    $("made-button").innerHTML = "◡◡"
+    document.cookie = "made=hide"
+  } else {
+    $("made-button").innerHTML = "◉◉"
+    document.cookie = "made=visible"
+  }
+}
+
+toggle_contributed = function () {
+    var body = document.body
+    $("contributed").classList.toggle("hide")
+
+    if ($("contributed").classList.contains("hide")) {
+    $("contributed-button").innerHTML = "◡◡"
+    document.cookie = "contributed=hide"
+  } else {
+    $("contributed-button").innerHTML = "◉◉"
+    document.cookie = "contributed=visible"
+  }
+}
+
 
 toggle_dark = function () {
   var body = document.body
@@ -63,4 +89,19 @@ window.onload = function () {
   $("mode").onclick = function() {
     toggle_dark();
   }
+  
+  let made = getCookie("made");
+  if (made == "hide")
+    toggle_made();
+  $("made-button").onclick = function() {
+    toggle_made();
+  }
+
+  let contributed = getCookie("contributed");
+  if (contributed == "hide")
+    toggle_contributed();
+  $("contributed-button").onclick = function() {
+    toggle_contributed();
+  }
+  
 }
