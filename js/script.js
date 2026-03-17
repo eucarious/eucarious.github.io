@@ -51,6 +51,19 @@ toggle_contributed = function () {
   }
 }
 
+toggle_publications = function () {
+    var body = document.body
+    $("publications").classList.toggle("hide")
+
+    if ($("publications").classList.contains("hide")) {
+    $("publications-button").innerHTML = "◡◡"
+    document.cookie = "publications=hide"
+  } else {
+    $("publications-button").innerHTML = "◉◉"
+    document.cookie = "publications=visible"
+  }
+}
+
 
 toggle_dark = function () {
   var body = document.body
@@ -102,6 +115,13 @@ window.onload = function () {
     toggle_contributed();
   $("contributed-button").onclick = function() {
     toggle_contributed();
+  }
+
+  let publications = getCookie("publications");
+  if (publications == "hide")
+    toggle_publications();
+  $("publications-button").onclick = function() {
+    toggle_publications();
   }
   
 }
